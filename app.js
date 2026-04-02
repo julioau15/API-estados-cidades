@@ -154,5 +154,5 @@ app.get('/v1/senai/capital/brasil', (req,res) => {
 
 // Serve para inicializar a API para receber requisições
 app.listen(port, () => {
-    console.log(`API de estados e cidades rodando em http://localhost:${port}`)
+    console.log(`API de estados e cidades no ar`)
 })
