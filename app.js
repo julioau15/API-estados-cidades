@@ -81,7 +81,12 @@ const DOC_API = {
     ]
 }
 
-// Raiz da API
+// Raiz do projeto sucesso
+app.get('/', (req,res) => {
+    res.status(200).json({"message": "API Estados e cidades Funcionando. Por favor, acesse (/v1/senai/help) para consultar a documentação."})
+})
+
+// Retorna uma documentação do projeto
 app.get('/v1/senai/help', (req,res) => {
     res.status(200).json(DOC_API)
 })
@@ -150,6 +155,11 @@ app.get('/v1/senai/capital/brasil', (req,res) => {
         res.status(200).json(capital)
     else
         res.status(404).json({"message": "Erro, dados da capital não encontrados."})
+})
+
+// Raiz do projeto Erro
+app.get('/', (req,res) => {
+    res.status(404).json({"message": "não foi possivel acessar esta rota. Por favor, acesse (/v1/senai/help) para consultar a documentação."})
 })
 
 // Serve para inicializar a API para receber requisições
