@@ -22,39 +22,57 @@ API REST desenvolvida com Node.js e Express para manipulação de dados de estad
 
 ### Listar estados
 
+```` http
 GET /v1/senai/estados
+````
 
 ### Dados de um estado
 
+```` http
 GET /v1/senai/estado/dados/:uf
+````
 
 Exemplo:
 
+```` http
 GET /v1/senai/estado/dados/sp
+````
 
 ### Capital de um estado
 
+```` http
 GET /v1/senai/estado/capital/:uf
+````
 
 ### Cidades de um estado
 
+```` http
 GET /v1/senai/estado/cidades/:uf
+````
 
 ### Estados por região
 
+```` http
 GET /v1/senai/regiao/estados/:regiao
+````
 
 Exemplo:
 
+```` http
 GET /v1/senai/regiao/estados/sudeste
+````
 
 ### Capitais do Brasil (histórico)
 
+```` http
 GET /v1/senai/capital/brasil
+````
 
 ### Documentação da API
 
+```` http
 GET /v1/senai/help
+````
 
 ## Como rodar o projeto
 
@@ -68,15 +86,21 @@ node app.js
 
 ### 3. Acessar a API
 
+```` http
 http://localhost:8080/
+````
 
 ## Estrutura do projeto
 
 ## Exemplo de uso
 
+```` http
 GET http://localhost:8080/v1/senai/estados
+````
 
+```` http
 GET http://localhost:8080/v1/senai/estado/cidades/sp
+````
 
 ## Próximas melhorias
 
